@@ -1,0 +1,213 @@
+// IMAR Theme - Recruitment Module Specific Styles
+
+// Applicant kanban cards
+.o_hr_recruitment_kanban {
+    .o_kanban_record {
+        border-left: 4px solid transparent;
+
+        // Card con priorità alta
+        &.oe_kanban_global_click:has(.o_priority .fa-star) {
+            border-left-color: $imar-warning;
+        }
+
+        // Candidato info
+        .oe_kanban_details {
+            h4, strong {
+                color: $imar-gray-800;
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .text-muted {
+                color: $imar-gray-500;
+            }
+        }
+
+        // Job position badge
+        .o_kanban_record_subtitle {
+            display: inline-block;
+            background-color: $imar-indigo-light;
+            color: $imar-indigo-dark;
+            padding: 0.25rem 0.75rem;
+            border-radius: $imar-radius;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        // Activity indicator
+        .o_kanban_record_bottom {
+            .o_activity_color_warning {
+                color: $imar-warning;
+            }
+            .o_activity_color_danger {
+                color: $imar-danger;
+            }
+        }
+    }
+
+    // Stage columns with colors
+    .o_kanban_group {
+        &[data-id] {
+            // Prima colonna - Nuovi
+            &:nth-child(1) {
+                .o_kanban_header {
+                    border-top: 3px solid $imar-info;
+                    border-radius: $imar-radius $imar-radius 0 0;
+                }
+            }
+            // Seconda colonna - In Review
+            &:nth-child(2) {
+                .o_kanban_header {
+                    border-top: 3px solid $imar-warning;
+                    border-radius: $imar-radius $imar-radius 0 0;
+                }
+            }
+            // Terza colonna - Interview
+            &:nth-child(3) {
+                .o_kanban_header {
+                    border-top: 3px solid $imar-indigo;
+                    border-radius: $imar-radius $imar-radius 0 0;
+                }
+            }
+            // Quarta+ colonna - Final/Hired
+            &:nth-child(n+4) {
+                .o_kanban_header {
+                    border-top: 3px solid $imar-success;
+                    border-radius: $imar-radius $imar-radius 0 0;
+                }
+            }
+        }
+    }
+}
+
+// Applicant form
+.o_applicant_form {
+    // Avatar area
+    .o_field_image {
+        border-radius: $imar-radius-lg;
+        overflow: hidden;
+        box-shadow: $imar-shadow;
+    }
+
+    // Salary fields
+    .o_field_monetary {
+        font-weight: 600;
+        color: $imar-success;
+    }
+
+    // Skills/Tags
+    .o_field_many2many_tags {
+        .badge {
+            background: linear-gradient(135deg, $imar-indigo-light 0%, rgba($imar-indigo, 0.2) 100%);
+            color: $imar-indigo-dark;
+            border: 1px solid rgba($imar-indigo, 0.2);
+            font-weight: 500;
+            padding: 0.35rem 0.75rem;
+            margin: 0.15rem;
+        }
+    }
+
+    // Refuse reason (red styling)
+    &[data-application_status="refused"] {
+        .o_form_sheet {
+            border-left: 4px solid $imar-danger;
+        }
+    }
+}
+
+// Job positions list
+.o_hr_job_kanban {
+    .o_kanban_record {
+        background: linear-gradient(135deg, $imar-bg-card 0%, $imar-gray-50 100%);
+
+        .o_kanban_card_header {
+            background-color: transparent;
+        }
+
+        // Stats (candidati, posizioni aperte)
+        .o_kanban_primary_left {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $imar-indigo;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, $imar-red 0%, $imar-red-dark 100%);
+            border: none;
+        }
+    }
+}
+
+// Dashboard stats cards (if present)
+.o_hr_recruitment_dashboard {
+    .o_stat_card {
+        background-color: $imar-bg-card;
+        border-radius: $imar-radius-lg;
+        box-shadow: $imar-shadow;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $imar-shadow-lg;
+        }
+
+        .o_stat_value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, $imar-indigo 0%, $imar-red 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .o_stat_label {
+            color: $imar-gray-500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+// List view improvements
+.o_list_view {
+    .o_data_row {
+        transition: all 0.15s ease;
+
+        &:hover {
+            background-color: rgba($imar-indigo, 0.05);
+        }
+
+        // Status colors
+        td.text-danger {
+            background-color: rgba($imar-danger, 0.1);
+        }
+
+        td.text-success {
+            background-color: rgba($imar-success, 0.1);
+        }
+    }
+
+    th {
+        background-color: $imar-gray-50;
+        color: $imar-gray-700;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+// Activity scheduling
+.o_ActivityListPopoverItem {
+    border-radius: $imar-radius;
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    transition: all 0.15s ease;
+
+    &:hover {
+        background-color: $imar-gray-50;
+    }
+}

@@ -1,0 +1,135 @@
+// IMAR Theme - Kanban View (stile card moderno)
+
+// Kanban container
+.o_kanban_view {
+    background-color: $imar-bg-light;
+    padding: 1rem;
+
+    // Colonne kanban
+    .o_kanban_group {
+        background-color: $imar-gray-100;
+        border-radius: $imar-radius-lg;
+        padding: 0.75rem;
+        margin-right: 1rem;
+
+        // Header colonna
+        .o_kanban_header {
+            background: transparent;
+            padding: 0.5rem 0.75rem;
+            margin-bottom: 0.5rem;
+
+            .o_column_title {
+                font-weight: 600;
+                font-size: 0.9rem;
+                color: $imar-gray-700;
+            }
+
+            .o_kanban_config .dropdown-toggle {
+                color: $imar-gray-400;
+
+                &:hover {
+                    color: $imar-gray-600;
+                }
+            }
+        }
+    }
+
+    // Card kanban
+    .o_kanban_record {
+        background-color: $imar-bg-card;
+        border: none;
+        border-radius: $imar-radius-md;
+        box-shadow: $imar-shadow;
+        margin-bottom: 0.75rem;
+        padding: 1rem;
+        transition: all 0.2s ease;
+
+        &:hover {
+            box-shadow: $imar-shadow-lg;
+            transform: translateY(-2px);
+        }
+
+        // Contenuto card
+        .o_kanban_record_body {
+            padding: 0;
+        }
+
+        // Titolo card
+        .o_kanban_record_title,
+        .oe_kanban_content strong,
+        .o_kanban_record_top {
+            font-weight: 600;
+            color: $imar-gray-800;
+            margin-bottom: 0.5rem;
+        }
+
+        // Subtitle/details
+        .o_kanban_record_subtitle,
+        .oe_kanban_bottom_left {
+            color: $imar-gray-500;
+            font-size: 0.85rem;
+        }
+
+        // Tags
+        .o_tag, .badge {
+            border-radius: $imar-radius;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            font-weight: 500;
+        }
+
+        // Avatar
+        .o_kanban_image {
+            border-radius: $imar-radius;
+            overflow: hidden;
+        }
+
+        // Priority stars
+        .o_priority {
+            .o_priority_star {
+                color: $imar-warning;
+            }
+        }
+
+        // Footer card
+        .oe_kanban_bottom_right {
+            .o_kanban_record_bottom {
+                border-top: 1px solid $imar-gray-100;
+                padding-top: 0.75rem;
+                margin-top: 0.75rem;
+            }
+        }
+    }
+
+    // Card dragging
+    .o_kanban_record.ui-sortable-helper {
+        box-shadow: $imar-shadow-lg;
+        transform: rotate(2deg);
+    }
+
+    // Quick create
+    .o_kanban_quick_create {
+        background-color: $imar-bg-card;
+        border-radius: $imar-radius-md;
+        box-shadow: $imar-shadow;
+        padding: 1rem;
+        border: 2px dashed $imar-gray-300;
+
+        input {
+            border-radius: $imar-radius;
+            border: 1px solid $imar-gray-200;
+
+            &:focus {
+                border-color: $imar-indigo;
+                box-shadow: 0 0 0 3px rgba($imar-indigo, 0.1);
+            }
+        }
+    }
+}
+
+// Ungrouped kanban
+.o_kanban_ungrouped {
+    .o_kanban_record {
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,116 @@
+// IMAR Theme - Layout generale
+
+// Reset e base
+.o_web_client {
+    background-color: $imar-bg-light !important;
+}
+
+// Navbar superiore
+.o_main_navbar {
+    background: linear-gradient(135deg, $imar-indigo 0%, $imar-indigo-dark 100%) !important;
+    box-shadow: $imar-shadow-md;
+
+    .o_menu_brand {
+        color: white !important;
+        font-weight: 600;
+    }
+
+    .o_menu_sections .o_nav_entry {
+        color: rgba(255, 255, 255, 0.9) !important;
+        border-radius: $imar-radius;
+        margin: 0 2px;
+        transition: all 0.2s ease;
+
+        &:hover, &.active {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            color: white !important;
+        }
+    }
+}
+
+// Action manager / Content area
+.o_action_manager {
+    background-color: $imar-bg-light;
+    padding: 1rem;
+}
+
+// Control panel (barra con filtri e pulsanti)
+.o_control_panel {
+    background-color: $imar-bg-card;
+    border-radius: $imar-radius-lg;
+    box-shadow: $imar-shadow;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border: none;
+
+    .o_cp_buttons .btn-primary {
+        background: linear-gradient(135deg, $imar-red 0%, $imar-red-dark 100%);
+        border: none;
+        border-radius: $imar-radius;
+        font-weight: 500;
+        padding: 0.5rem 1.25rem;
+        box-shadow: $imar-shadow-sm;
+        transition: all 0.2s ease;
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: $imar-shadow-md;
+        }
+    }
+
+    .o_searchview {
+        border-radius: $imar-radius;
+        border: 1px solid $imar-gray-200;
+        background-color: $imar-gray-50;
+
+        &:focus-within {
+            border-color: $imar-indigo;
+            box-shadow: 0 0 0 3px rgba($imar-indigo, 0.1);
+        }
+    }
+}
+
+// Breadcrumb
+.o_breadcrumb {
+    .o_back_button {
+        background-color: $imar-gray-100;
+        border-radius: $imar-radius;
+
+        &:hover {
+            background-color: $imar-gray-200;
+        }
+    }
+}
+
+// Bottoni generali
+.btn-primary {
+    background-color: $imar-indigo !important;
+    border-color: $imar-indigo !important;
+    border-radius: $imar-radius;
+
+    &:hover, &:focus {
+        background-color: $imar-indigo-dark !important;
+        border-color: $imar-indigo-dark !important;
+    }
+}
+
+.btn-secondary {
+    background-color: $imar-gray-100;
+    border-color: $imar-gray-200;
+    color: $imar-gray-700;
+    border-radius: $imar-radius;
+
+    &:hover {
+        background-color: $imar-gray-200;
+        border-color: $imar-gray-300;
+    }
+}
+
+// Link
+a {
+    color: $imar-indigo;
+
+    &:hover {
+        color: $imar-indigo-dark;
+    }
+}

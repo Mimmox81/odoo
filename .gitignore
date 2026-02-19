@@ -1,3 +1,14 @@
+# sensitive / local files
+CREDENZIALI.txt
+*.log
+ngrok*
+data/
+oca_web_temp/
+requirements_local.txt
+start_odoo*.bat
+*.png
+venv/
+
 # sphinx build directories
 _build/
 

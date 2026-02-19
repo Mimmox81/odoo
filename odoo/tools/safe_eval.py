@@ -102,6 +102,8 @@ _CONST_OPCODES = set(to_opcodes([
     'RETURN_CONST',
     # 3.13
     'TO_BOOL',
+    # 3.14
+    'LOAD_SMALL_INT', 'LOAD_CONST_IMMORTAL', 'NOT_TAKEN',
 ])) - _BLACKLIST
 
 # operations which are both binary and inplace, same order as in doc'

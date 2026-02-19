@@ -1,0 +1,184 @@
+// IMAR Theme - Form View
+
+// Form container
+.o_form_view {
+    background-color: $imar-bg-light;
+
+    // Sheet (area principale del form)
+    .o_form_sheet_bg {
+        background-color: $imar-bg-light;
+        padding: 1.5rem;
+    }
+
+    .o_form_sheet {
+        background-color: $imar-bg-card;
+        border-radius: $imar-radius-lg;
+        box-shadow: $imar-shadow;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        border: none;
+    }
+
+    // Header form (statusbar)
+    .o_form_statusbar {
+        background-color: $imar-gray-50;
+        border-radius: $imar-radius-lg $imar-radius-lg 0 0;
+        border-bottom: 1px solid $imar-gray-200;
+        padding: 1rem 1.5rem;
+
+        .o_statusbar_status {
+            .o_arrow_button {
+                background-color: $imar-gray-100;
+                border-color: $imar-gray-200;
+                border-radius: $imar-radius;
+                margin: 0 0.25rem;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background-color: $imar-gray-200;
+                }
+
+                &.btn-primary, &.o_arrow_button_current {
+                    background: linear-gradient(135deg, $imar-indigo 0%, $imar-indigo-dark 100%);
+                    border-color: $imar-indigo;
+                    color: white;
+                }
+            }
+        }
+
+        .o_statusbar_buttons {
+            .btn {
+                border-radius: $imar-radius;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Titolo
+    .oe_title {
+        h1, .o_field_char {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: $imar-gray-900;
+        }
+    }
+
+    // Gruppi di campi
+    .o_group {
+        margin-bottom: 1.5rem;
+
+        .o_group_col_6 {
+            padding: 0 1rem;
+        }
+    }
+
+    // Label campi
+    .o_form_label {
+        color: $imar-gray-600;
+        font-weight: 500;
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+    }
+
+    // Input fields
+    .o_field_widget {
+        input, textarea, select {
+            border-radius: $imar-radius;
+            border: 1px solid $imar-gray-200;
+            padding: 0.5rem 0.75rem;
+            transition: all 0.2s ease;
+
+            &:focus {
+                border-color: $imar-indigo;
+                box-shadow: 0 0 0 3px rgba($imar-indigo, 0.1);
+                outline: none;
+            }
+        }
+
+        // Many2one
+        .o_input_dropdown {
+            border-radius: $imar-radius;
+        }
+
+        // Tags
+        .o_field_many2many_tags .badge {
+            background-color: $imar-indigo-light;
+            color: $imar-indigo-dark;
+            border-radius: $imar-radius;
+            font-weight: 500;
+        }
+    }
+
+    // Notebook (tabs)
+    .o_notebook {
+        margin-top: 1.5rem;
+
+        .nav-tabs {
+            border-bottom: 2px solid $imar-gray-200;
+
+            .nav-link {
+                border: none;
+                border-bottom: 2px solid transparent;
+                color: $imar-gray-500;
+                font-weight: 500;
+                padding: 0.75rem 1.25rem;
+                margin-bottom: -2px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: $imar-indigo;
+                    border-bottom-color: $imar-gray-300;
+                }
+
+                &.active {
+                    color: $imar-indigo;
+                    border-bottom-color: $imar-indigo;
+                    background: transparent;
+                }
+            }
+        }
+
+        .tab-content {
+            padding: 1.5rem 0;
+        }
+    }
+
+    // Button box
+    .oe_button_box {
+        .oe_stat_button {
+            background-color: $imar-gray-50;
+            border: 1px solid $imar-gray-200;
+            border-radius: $imar-radius;
+            margin: 0.25rem;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: $imar-gray-100;
+                border-color: $imar-gray-300;
+            }
+
+            .o_stat_value {
+                color: $imar-indigo;
+                font-weight: 700;
+            }
+
+            .o_stat_text {
+                color: $imar-gray-500;
+            }
+        }
+    }
+}
+
+// Chatter
+.o_FormRenderer_chatterContainer {
+    background-color: $imar-bg-light;
+    padding: 1rem;
+
+    .o-mail-Chatter {
+        background-color: $imar-bg-card;
+        border-radius: $imar-radius-lg;
+        box-shadow: $imar-shadow;
+        padding: 1rem;
+    }
+}
